@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <nav className="nav-bar">
       <img src={logo} alt="Cosmos Logo." width={50} height={50} />
-      <h1>Space Travellers&ampos; Hub</h1>
+      <h1>Space Travellers&apos; Hub</h1>
       <ul className="nav-bar-links">
         {links.map((link) => (
           <li key={link.path}>
