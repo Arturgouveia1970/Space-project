@@ -6,6 +6,10 @@ import './NavBar.css';
 const NavBar = () => {
   const links = [
     {
+      path: 'rockets',
+      text: 'Rockets',
+    },
+    {
       path: 'profile',
       text: 'My Profile',
     },
