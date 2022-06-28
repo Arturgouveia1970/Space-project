@@ -16,6 +16,10 @@ const NavBar = () => {
       text: 'Rockets',
     },
     {
+      path: 'missions',
+      text: 'Missions',
+    },
+    {
       path: 'profile',
       text: 'My Profile',
     },
