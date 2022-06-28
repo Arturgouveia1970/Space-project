@@ -26,10 +26,10 @@ const Missions = () => {
         </thead>
         {
       missions.map(({
-        mission_id, mission_name, description, reserved = false,
+        mission_id, name, description, reserved = false,
       }) => (
         <tr key={mission_id}>
-          <td className="mission_name"><h1>{ mission_name }</h1></td>
+          <td className="mission_name"><h1>{ name }</h1></td>
           <td className="mission_description"><p>{description}</p></td>
           <td>{ reserved ? (<span className="badge badge--primary">ACTIVE mEMBER</span>) : (<span className="badge badge--secondary">NOT A MEMBER</span>) }</td>
           <td>{ reserved ? (<button type="button" className="app-btn-danger">Leave Mission</button>) : (<button type="button" className="app-btn-ghost">Join Mission</button>) }</td>
