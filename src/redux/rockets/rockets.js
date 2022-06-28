@@ -1,16 +1,16 @@
 import SpaceService from '../../services/Services';
 
 const ADD_ALL_ROCKETS = 'spacehub/rockets/ADD_ALL_ROCKETS';
-const RESERVE_ROCKET = 'spacehub/rockets/RESERVE_ROCKET';
+const TOGGLE_RESERVATION = 'spacehub/rockets/TOGGLE_RESERVATION';
 
 export default function rockets(state = [], action = {}) {
   switch (action.type) {
     case ADD_ALL_ROCKETS:
       return action.payload;
-    case RESERVE_ROCKET:
+    case TOGGLE_RESERVATION:
       return state.map((rocket) => {
         if (rocket.id !== action.payload) return rocket;
-        return { ...rocket, reserved: true };
+        return { ...rocket, reserved: !rocket.reserved };
       });
     default:
       return state;
@@ -26,9 +26,10 @@ export const getRockets = async (dispatch, getState) => {
       name: rocket.rocket_name,
       description: rocket.description,
       flickr_images: rocket.flickr_images[0],
+      reserved: false,
     }));
     dispatch({ type: ADD_ALL_ROCKETS, payload: rockets });
   }
 };
 
-export const reserveRocket = (id) => ({ type: RESERVE_ROCKET, payload: id });
+export const reserveRocket = (id) => ({ type: TOGGLE_RESERVATION, payload: id });
