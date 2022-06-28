@@ -3,6 +3,7 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
 .missions {
   padding: 3rem 3rem;
 }
@@ -78,11 +79,10 @@ button {
 }
 
 .badge--primary {
-  background-color: #68c9ca; 
+  background-color: #68c9ca;
 }
 
 .badge--secondary {
   background-color: #808080;
   color: #fff;
 }
-
