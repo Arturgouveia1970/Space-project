@@ -31,7 +31,7 @@ const Missions = () => {
 
   return (
     <div id="missions-section" style={{ overflow: openModal ? 'hidden' : 'scroll' }}>
-      <table>
+      <table className="missions_table">
         <thead>
           <tr>
             <th>Mission</th>
@@ -40,7 +40,7 @@ const Missions = () => {
             <th> </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="missions">
           {missions.map((mission) => (
             <tr key={mission.mission_id}>
               <td className="mission-name">

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { AiOutlineClose } from 'react-icons/ai';
-import './description.css';
 
 const Description = ({ closeModal, name, description }) => (
   <div className="description-modal">
