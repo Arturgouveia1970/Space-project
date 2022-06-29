@@ -6,7 +6,7 @@ import Description from './Description';
 
 const Missions = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [modalMission, setModalMission] = useState({
+  const [modalMission] = useState({
     name: '',
     description: '',
   });
@@ -19,14 +19,6 @@ const Missions = () => {
 
   const toggleStatus = (id) => {
     dispatch(changeStatus(id));
-  };
-
-  const showModal = (name, description) => {
-    setOpenModal(true);
-    setModalMission({
-      name,
-      description,
-    });
   };
 
   return (
@@ -45,13 +37,6 @@ const Missions = () => {
             <tr key={mission.mission_id}>
               <td className="mission-name">
                 {mission.mission_name}
-                <button
-                  type="button"
-                  className="see-more"
-                  onClick={() => showModal(mission.mission_name, mission.description)}
-                >
-                  See more
-                </button>
               </td>
 
               <td className="mission-desc">{mission.description}</td>
