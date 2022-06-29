@@ -18,6 +18,7 @@ h2 {
 
 .list {
   margin-top: 40px;
+  list-style: none;
 }
 
 .list-item {
