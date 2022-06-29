@@ -1,35 +1,42 @@
 import SpaceService from '../../services/Services';
 
-const ADD_MISSIONS = 'spacehub/missions/ADD_MISSIONS';
-const TOGGLE_JOIN_MISSION = 'spacehub/missions/TOGGLE_JOIN_MISSION';
+const LOAD_MISSIONS = 'spacehub/missions/LOAD_MISSIONS';
+const CHANGE_STATUS = 'spacehub/missions/CHANGE_STATUS';
+
+// Action creators
+const changeStatus = (id) => ({ type: CHANGE_STATUS, payload: id });
 
 export default function missions(state = [], action = {}) {
   switch (action.type) {
-    case ADD_MISSIONS:
+    case LOAD_MISSIONS:
       return action.payload;
-    case TOGGLE_JOIN_MISSION:
-      return state.map((mission) => {
-        if (mission.id !== action.payload) return mission;
-        return { ...mission, Active: !mission.Active };
-      });
+    case CHANGE_STATUS:
+      return [...state.map((mission) => {
+        if (mission.mission_id !== action.payload) {
+          return mission;
+        }
+        return { ...mission, reserved: !mission.reserved };
+      })];
     default:
       return state;
   }
 }
 
-export const getMissions = async (dispatch, getState) => {
-  const currentMission = getState().missions;
-  if (currentMission.length === 0) {
-    const { data } = await SpaceService.getMissions();
-    const missions = data.map((mission) => ({
-      id: mission.id,
-      name: mission.mission_name,
-      description: mission.description,
-      status: false,
+const fetchMissions = async (dispatch, getState) => {
+  const currentMissions = getState().missions;
 
-    }));
-    dispatch({ type: ADD_MISSIONS, payload: missions });
+  if (currentMissions.length === 0) {
+    const { data } = await SpaceService.getMissions();
+    const missions = data.map((mission) => (
+      {
+        mission_id: mission.mission_id,
+        mission_name: mission.mission_name,
+        description: mission.description,
+        reserved: false,
+      }
+    ));
+    dispatch({ type: LOAD_MISSIONS, payload: missions });
   }
 };
 
-export const joinMission = (id) => ({ type: TOGGLE_JOIN_MISSION, payload: id });
+export { fetchMissions, changeStatus };

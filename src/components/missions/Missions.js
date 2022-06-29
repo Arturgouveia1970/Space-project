@@ -1,43 +1,79 @@
-/* eslint-disable camelcase */
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { getMissions } from '../../redux/missions/missions';
 import './Missions.css';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMissions, changeStatus } from '../../redux/missions/missions';
+import Description from './Description';
 
 const Missions = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const [modalMission] = useState({
+    name: '',
+    description: '',
+  });
+  const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMissions);
+    dispatch(fetchMissions);
   }, []);
 
-  const missions = useSelector((state) => state.missions);
+  const toggleStatus = (id) => {
+    dispatch(changeStatus(id));
+  };
 
   return (
-    <div className="missions">
+    <div id="missions-section" style={{ overflow: openModal ? 'hidden' : 'scroll' }}>
       <table className="missions_table">
         <thead>
           <tr>
             <th>Mission</th>
-            <th>Description</th>
+            <th className="desc-header">Description</th>
             <th>Status</th>
-            <th>Join Mission</th>
+            <th> </th>
           </tr>
         </thead>
-        {
-      missions.map(({
-        mission_id, name, description, reserved = false,
-      }) => (
-        <tr key={mission_id}>
-          <td className="mission_name"><h1>{ name }</h1></td>
-          <td className="mission_description"><p>{description}</p></td>
-          <td>{ reserved ? (<span className="badge badge--primary">ACTIVE mEMBER</span>) : (<span className="badge badge--secondary">NOT A MEMBER</span>) }</td>
-          <td>{ reserved ? (<button type="button" className="app-btn-danger">Leave Mission</button>) : (<button type="button" className="app-btn-ghost">Join Mission</button>) }</td>
-        </tr>
-      ))
-    }
+        <tbody className="missions">
+          {missions.map((mission) => (
+            <tr key={mission.mission_id}>
+              <td className="mission-name">
+                {mission.mission_name}
+              </td>
+
+              <td className="mission-desc">{mission.description}</td>
+
+              <td className="status">
+                {!mission.reserved && <span>NOT A MEMBER</span>}
+                {mission.reserved && (
+                  <span style={{ backgroundColor: '#18a2b8' }}>Active Member</span>
+                )}
+              </td>
+
+              <td className="join-mission">
+                <button
+                  type="button"
+                  className="join-btn"
+                  onClick={() => toggleStatus(mission.mission_id)}
+                  style={{
+                    borderColor: mission.reserved ? '#d90429' : '#343a40',
+                    color: mission.reserved ? '#d90429' : '#343a40',
+                  }}
+                >
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
+      {openModal && (
+        <Description
+          closeModal={setOpenModal}
+          name={modalMission.name}
+          description={modalMission.description}
+        />
+      )}
     </div>
   );
 };
+
 export default Missions;
