@@ -26,9 +26,9 @@ const Missions = () => {
       <table className="missions_table">
         <thead>
           <tr>
-            <th>Mission</th>
+            <th className="desc-header">Mission</th>
             <th className="desc-header">Description</th>
-            <th>Status</th>
+            <th className="desc-header">Status</th>
             <th> </th>
           </tr>
         </thead>
@@ -44,7 +44,7 @@ const Missions = () => {
               <td className="status">
                 {!mission.reserved && <span>NOT A MEMBER</span>}
                 {mission.reserved && (
-                  <span style={{ backgroundColor: '#18a2b8' }}>Active Member</span>
+                  <span style={{ backgroundColor: '#18a2b8', color: '#fff', fontSize: '15px' }}>Active Member</span>
                 )}
               </td>
 

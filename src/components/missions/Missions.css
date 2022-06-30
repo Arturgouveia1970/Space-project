@@ -10,6 +10,7 @@ body {
 
 .missions_table {
   border: 1px solid #ccc;
+  margin-top: 70px;
 }
 
 .missions_table thead {
@@ -25,7 +26,7 @@ body {
 }
 
 .missions_table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #d9d6d6;
 }
 
 .missions_table tr:hover {
@@ -38,52 +39,32 @@ body {
   text-align: left;
 }
 
-.mission_name {
+.mission-name {
   display: flex;
   align-items: flex-start;
-  width: 10%;
+  width: 5%;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
-.mission_description {
+.desc-header {
+  border: 1px solid grey;
+}
+
+.mission-desc {
   width: 60%;
   line-height: 1.2rem;
+  font-size: 12px;
 }
 
 button {
   padding: 0.4rem 1rem;
+  border: 1px solid black;
 }
 
-.app-btn-primary {
-  background-color: #46769e;
-  color: white;
-}
-
-.app-btn-ghost {
-  background-color: #fff;
-  color: #46769e;
-  border: 1px solid #46769e;
-}
-
-.app-btn-danger {
-  background-color: #fff;
-  color: #9e2f2f;
-  border: 1px solid #9e2f2f;
-}
-
-.badge {
-  color: #fff;
-  display: inline-block;
-  border-radius: 3px;
-  padding: 0.4rem 1rem;
-  white-space: nowrap;
+.status span {
   font-size: 12px;
-}
-
-.badge--primary {
-  background-color: #68c9ca;
-}
-
-.badge--secondary {
-  background-color: #808080;
+  background: rgb(69, 72, 65);
+  border-radius: 2px;
   color: #fff;
 }

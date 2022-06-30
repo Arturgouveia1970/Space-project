@@ -1,72 +1,53 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Space Traveller
 
-> Description the project.
+> A web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.Description the project.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- HTML5, CSS3, JS ES6
+- React & Redux
+- Webpack
+- Linters: ESLint, Stylelint, Webhint
+- GitFlow
+- Jest
 
-## Live Demo (if available)
+## Author
 
-[Live Demo Link](https://livedemo.com)
+👤 **Artur Gouveia**
 
+- [GitHub](https://github.com/Arturgouveia1970)
+- [Twitter](https://twitter.com/@arturgouveia10)
+- [LinkedIn](https://www.linkedin.com/in/artur-gouveia-323868197/)
 
+## Live Demo
+- [netlify](https://artur-felix-space-capstone.netlify.app)
+   
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-### Setup
-
-### Install
+You must have a browser on your device, a visual code, a git version installed, node.js installed in your device.
 
 ### Usage
 
-### Run tests
+Set up the project by cloning and changing into the repo directory:
+https://github.com/Arturgouveia1970/bookstore-react-redux.git
 
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
 Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
