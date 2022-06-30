@@ -6,7 +6,6 @@
   vertical-align: top;
   flex-direction: row;
   justify-content: center;
-  padding: 2rem auto;
   align-items: center;
 }
 
@@ -38,7 +37,7 @@ h2 {
 }
 
 .missions-list li {
-  width: 700px;
+  width: 650px;
   font-size: 14px;
   font-weight: 500;
   padding: 10px;
@@ -61,7 +60,7 @@ h2 {
 
 @media screen and (max-width: 400px) {
   #profile-section {
-    padding: 0 10px 10px;
+    padding: 0 15px 10px;
   }
 
   h2 {
