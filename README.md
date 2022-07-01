@@ -23,6 +23,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Twitter](https://twitter.com/@arturgouveia10)
 - [LinkedIn](https://www.linkedin.com/in/artur-gouveia-323868197/)
 
+👤 **Felix Odete**
+
+- [GitHub](https://github.com/felixodette)
+- [Twitter](https://twitter.com/Odette3000)
+- [LinkedIn](https://www.linkedin.com/in/felixodete)
+
 ## Live Demo
 - [netlify](https://artur-felix-space-capstone.netlify.app)
    
