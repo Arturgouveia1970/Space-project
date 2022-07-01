@@ -7,7 +7,7 @@ const ReservedRockets = () => {
   ));
 
   return (
-    <div>
+    <div className="reserved-rockets">
       <h2>My Rockets</h2>
       <ul className="list">
         {reservedRockets.length > 0
