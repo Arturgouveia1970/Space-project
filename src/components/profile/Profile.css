@@ -24,11 +24,21 @@ h2 {
   margin-left: 3rem;
 }
 
+.reserved-rockets h2 {
+  text-align: left;
+  margin-left: 40px;
+}
+
 .reserved-missions {
   position: absolute;
   top: 85px;
   margin-left: 50%;
   list-style: none;
+}
+
+.reserved-missions h2 {
+  text-align: left;
+  margin-left: 40px;
 }
 
 .missions-list-items {
