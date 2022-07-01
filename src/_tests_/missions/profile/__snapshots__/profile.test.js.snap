@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot testing snapshot for Profile component 1`] = `
+<div
+  id="profile=section"
+>
+  <div
+    className="reserved-rockets"
+  >
+    <h2>
+      My Rockets
+    </h2>
+    <ul
+      className="list"
+    >
+      You have no reserved rockets
+    </ul>
+  </div>
+  <div
+    className="reserved-missions"
+  >
+    <h2>
+      My Missions
+    </h2>
+    <ul
+      className="missions-list"
+    >
+      you have not joined any mission
+    </ul>
+  </div>
+</div>
+`;

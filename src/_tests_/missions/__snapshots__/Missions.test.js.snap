@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots testing snapshots for Missions component 1`] = `
+<div
+  id="missions-section"
+  style={
+    Object {
+      "overflow": "scroll",
+    }
+  }
+>
+  <table
+    className="missions_table"
+  >
+    <thead>
+      <tr>
+        <th
+          className="desc-header"
+        >
+          Mission
+        </th>
+        <th
+          className="desc-header"
+        >
+          Description
+        </th>
+        <th
+          className="desc-header"
+        >
+          Status
+        </th>
+        <th>
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="missions"
+    />
+  </table>
+</div>
+`;
