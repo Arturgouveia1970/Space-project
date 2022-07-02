@@ -1,0 +1,70 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.missions {
+  padding: 3rem 3rem;
+}
+
+.missions_table {
+  border: 1px solid #ccc;
+  margin-top: 70px;
+}
+
+.missions_table thead {
+  margin-top: 10px;
+  border-bottom: 1px solid #ccc;
+  height: 30px;
+}
+
+.missions_table td,
+.missions_table th {
+  border-right: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.missions_table tr:nth-child(even) {
+  background-color: #d9d6d6;
+}
+
+.missions_table tr:hover {
+  background-color: #ddd;
+}
+
+.missions th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+.mission-name {
+  display: flex;
+  align-items: flex-start;
+  width: 5%;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.desc-header {
+  border: 1px solid grey;
+}
+
+.mission-desc {
+  width: 60%;
+  line-height: 1.2rem;
+  font-size: 12px;
+}
+
+button {
+  padding: 0.4rem 1rem;
+  border: 1px solid black;
+}
+
+.status span {
+  font-size: 12px;
+  background: rgb(69, 72, 65);
+  border-radius: 2px;
+  color: #fff;
+}
